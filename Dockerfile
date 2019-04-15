@@ -1,5 +1,6 @@
 FROM jboss/wildfly:14.0.1.Final
 
+ENV MY_NODE_NAME default-node
 USER root
 
 COPY vulcan-entrypoint.sh /
