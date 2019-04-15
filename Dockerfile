@@ -7,7 +7,7 @@ RUN chmod +x /vulcan-entrypoint.sh
 
 WORKDIR /
 
-RUN mkdir /webapps && mkdir /webapps/logs \
+RUN mkdir /webapps \
     && chown -R jboss:jboss /webapps \
     && ln -s /opt/jboss/wildfly /webapps/wildfly
 
