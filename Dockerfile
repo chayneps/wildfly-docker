@@ -12,7 +12,9 @@ WORKDIR /
 
 RUN mkdir /webapps && mkdir -p /mnt/logs \
     && chown -R jboss:jboss /webapps \
-    && ln -s /opt/jboss/wildfly /webapps/wildfly
+    && ln -s /opt/jboss/wildfly /webapps/wildfly \
+    && rm -rf /opt/jboss/wildfly/welcome-content/* \
+    && touch /opt/jboss/wildfly/welcome-content/test.html
 
 
 EXPOSE 8080
