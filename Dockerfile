@@ -44,6 +44,8 @@ RUN apt-get update \
     && apt-get install -y lnav \
     && apt-get install -y busybox
 
+RUN busybox --install
+
 EXPOSE 8080
 
 USER jboss
