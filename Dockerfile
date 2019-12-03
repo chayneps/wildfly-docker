@@ -39,7 +39,10 @@ RUN chmod +x /init.sh \
     && touch /opt/jboss/wildfly/welcome-content/test.html
 
 RUN apt-get update \
-    && apt-get install -y unzip
+    && apt-get install -y unzip \
+    && apt-get install -y less \
+    && apt-get install -y lnav \
+    && apt-get install -y busybox
 
 EXPOSE 8080
 
