@@ -28,10 +28,11 @@ ENV MY_NODE_NAME default-node
 
 WORKDIR /
 COPY init.sh /
-#COPY entrypoint.sh /
 
 RUN chmod +x /init.sh \
-    && mkdir /webapps && mkdir -p /mnt/logs \
+    && mkdir /webapps \
+    && mkdir -p /mnt/logs \
+    && mkdir -p /mnt/aft \
     && chown -R jboss:jboss /mnt/logs \
     && chown -R jboss:jboss /webapps \
     && ln -s /opt/jboss/wildfly /webapps/wildfly \
