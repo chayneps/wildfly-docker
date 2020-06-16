@@ -52,4 +52,4 @@ EXPOSE 8080
 USER jboss
 COPY standalone.xml /opt/jboss/wildfly/standalone/configuration
 
-ENTRYPOINT [ "bash","-c","ln -s /mnt/logs/$MY_POD_NAME /webapps/logs && exec /webapps/wildfly/bin/standalone.sh -b 0.0.0.0 > /webapps/logs/wildfly.log 2>&1" ]
+ENTRYPOINT [ "bash","-c","exec /webapps/wildfly/bin/standalone.sh -b 0.0.0.0 > /webapps/logs/wildfly.log 2>&1" ]
